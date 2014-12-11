@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SternBrocotSequenceGenerator
 {
@@ -13,13 +15,24 @@ namespace SternBrocotSequenceGenerator
         {
             var x = Fibonacci();
 
-            int a = 
-            
+            int a = x.First();
+            throw new Exception();
 
         }
 
         public static IEnumerable<int> Fibonacci()
         {
+            int a = 1;
+            int b = 1;
+            int current;
+
+            while (true)
+            {
+                current = a + b;
+                yield return current;
+                a = b;
+                b = current;
+            }                        
         }
     }
 }
