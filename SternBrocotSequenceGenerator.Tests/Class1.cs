@@ -13,4 +13,25 @@ namespace SternBrocotSequenceGenerator.Tests
 
         }
     }
+
+    public class SternBrocotTests
+    {
+        public void Generates_expected_sequence_values()
+        {
+            var expected = new Fraction { };
+        }
+    }
+
+    public class Fraction
+    {
+        private int _dividend;
+        private int _divisor;
+
+        public Fraction(int dividend, int divisor)
+        {
+            if(divisor == 0) throw new ArgumentOutOfRangeException("Divisor may not be zero");
+            _dividend = dividend;
+            _divisor = divisor;
+        }
+    }
 }
