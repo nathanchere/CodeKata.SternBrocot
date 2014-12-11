@@ -22,16 +22,16 @@ namespace SternBrocotSequenceGenerator
 
         public static IEnumerable<int> Fibonacci()
         {
-            int a = 1;
-            int b = 1;
-            int current;
+            int a = 0;
+            int b = 0;
+            int current = 1;
 
             while (true)
             {
-                current = a + b;
                 yield return current;
                 a = b;
                 b = current;
+                current = a + b;                                
             }                        
         }
     }

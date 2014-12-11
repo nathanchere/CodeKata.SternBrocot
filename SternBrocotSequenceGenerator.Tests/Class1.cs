@@ -21,7 +21,7 @@ namespace SternBrocotSequenceGenerator
         [InlineData(10, 55)]
         public void Generates_expected_sequence_values(int iteration, int expected)
         {
-            var result = Sequence.Fibonacci().Skip(iteration).First();
+            var result = Sequence.Fibonacci().Skip(iteration-1).First();
 
             Assert.Equal(expected, result);
         }
@@ -42,7 +42,7 @@ namespace SternBrocotSequenceGenerator
         [InlineData(10, 3)]
         public void Generates_expected_sequence_values(int iteration, int expected)
         {
-            var result = Sequence.SternBrocotSeeds().Skip(iteration).First();
+            var result = Sequence.SternBrocotSeeds().Skip(iteration-1).First();
 
             Assert.Equal(expected, result);
         }
