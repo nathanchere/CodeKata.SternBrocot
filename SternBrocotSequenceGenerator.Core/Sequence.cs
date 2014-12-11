@@ -8,5 +8,18 @@ namespace SternBrocotSequenceGenerator
         {
             throw new System.NotImplementedException();
         }
+
+        public static IEnumerable<int> SternBrocotSeeds()
+        {
+            var x = Fibonacci();
+
+            int a = 
+            
+
+        }
+
+        public static IEnumerable<int> Fibonacci()
+        {
+        }
     }
 }
