@@ -44,19 +44,5 @@ namespace SternBrocotSequenceGenerator
                 yield return second;                        
             }      
         }
-
-        public static IEnumerable<int> Fibonacci()
-        {
-            int current = 0;
-            int next = 1;
-
-            while (true)
-            {
-                yield return next;
-                int last = current;
-                current = next;
-                next = last + current;                                
-            }                        
-        }
     }
 }
