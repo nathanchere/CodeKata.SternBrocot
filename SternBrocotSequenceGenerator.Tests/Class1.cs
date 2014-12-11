@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SternBrocotSequenceGenerator.Tests
 {
-    public class Class1
+    public class FibonacciSequenceTests
     {
+        public void Generates_expected_sequence_values()
+        {
+
+        }
     }
 }
