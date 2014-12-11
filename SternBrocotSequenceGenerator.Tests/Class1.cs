@@ -32,8 +32,7 @@ namespace SternBrocotSequenceGenerator
             var expected = new Fraction(expectedDividend,expectedDivisor);
             var result = Sequence.SternBrocot().Skip(iteration).First();
 
-            Assert.Equal(expectedDividend, result.Dividend);
-            Assert.Equal(expectedDivisor, result.Divisor);
+            Assert.Equal(expected, result);
         }
     }
 }
