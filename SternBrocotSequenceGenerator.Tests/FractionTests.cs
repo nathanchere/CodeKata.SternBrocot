@@ -1,7 +1,7 @@
 ﻿using Xunit;
 using Xunit.Extensions;
 
-namespace SternBrocotSequenceGenerator.Tests
+namespace SternBrocotSequenceGenerator
 {
     public class FractionTests
     {
