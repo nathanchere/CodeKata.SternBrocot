@@ -5,14 +5,14 @@ namespace SternBrocotSequenceGenerator
 {
     public class Fraction
     {
-        private int _dividend;
-        private int _divisor;
+        public int Dividend { get; private set; }
+        public int Divisor { get; private set; }
 
         private void Initialise(int dividend, int divisor)
         {
             if (divisor == 0) throw new ArgumentOutOfRangeException("Divisor may not be zero");
-            _dividend = dividend;
-            _divisor = divisor;
+            Dividend = dividend;
+            Divisor = divisor;
         }
 
         public Fraction(int dividend, int divisor)
@@ -38,7 +38,7 @@ namespace SternBrocotSequenceGenerator
 
         public override string ToString()
         {
-            return string.Format("{0}/{1}", _dividend, _divisor);
+            return string.Format("{0}/{1}", Dividend, Divisor);
         }
     }
 }
