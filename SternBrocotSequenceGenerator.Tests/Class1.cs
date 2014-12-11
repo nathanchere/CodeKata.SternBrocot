@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -31,18 +30,10 @@ namespace SternBrocotSequenceGenerator
         public void Generates_expected_sequence_values(int iteration, int expectedDividend, int expectedDivisor)
         {
             var expected = new Fraction(expectedDividend,expectedDivisor);
-            var result = Sequence.SternBrocot().Take(iteration);
+            var result = Sequence.SternBrocot().Skip(iteration).First();
 
             Assert.Equal(expectedDividend, result.Dividend);
             Assert.Equal(expectedDivisor, result.Divisor);
-        }
-    }
-
-    public static class Sequence
-    {
-        public static IEnumerable<Fraction> SternBrocot()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
