@@ -33,5 +33,10 @@ namespace SternBrocotSequenceGenerator.Tests
             _dividend = dividend;
             _divisor = divisor;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}/{1}", _dividend, _divisor);
+        }
     }
 }
