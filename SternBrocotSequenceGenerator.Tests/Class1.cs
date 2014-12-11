@@ -37,4 +37,12 @@ namespace SternBrocotSequenceGenerator
             Assert.Equal(expectedDivisor, result.Divisor);
         }
     }
+
+    public static class Sequence
+    {
+        public static IEnumerable<Fraction> SternBrocot()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }
