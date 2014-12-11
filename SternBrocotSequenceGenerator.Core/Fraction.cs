@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace SternBrocotSequenceGenerator
 {
@@ -24,7 +23,7 @@ namespace SternBrocotSequenceGenerator
         {
             if(string.IsNullOrEmpty(text)
                 || !text.Contains("/")
-                || text.Split('/').Count() != 2)
+                || text.Split('/').Length != 2)
                 throw new ArgumentException("Not a valid fraction");
 
             var result = text.Split('/');
@@ -55,14 +54,6 @@ namespace SternBrocotSequenceGenerator
             if (target.Divisor != this.Divisor) return false;
             return true;
             
-        }
-
-// override object.GetHashCode
-        public override int GetHashCode()
-        {
-            // TODO: write your implementation of GetHashCode() here
-            throw new NotImplementedException();
-            return base.GetHashCode();
         }
     }
 }

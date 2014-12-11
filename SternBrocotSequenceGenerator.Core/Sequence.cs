@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace SternBrocotSequenceGenerator
 {
@@ -31,17 +29,17 @@ namespace SternBrocotSequenceGenerator
 
             while (true)
             {
-                var first = values.First();
+                var first = values.First;
                 values.RemoveFirst();
 
-                var second = values.First();
+                var second = values.First;
                 
-                var nextSum = first + second;
-                values.AddLast(first + second);
+                var nextSum = first.Value + second.Value;
+                values.AddLast(nextSum);
                 yield return nextSum;                        
 
-                values.AddLast(second);
-                yield return second;                        
+                values.AddLast(second.Value);
+                yield return second.Value;                        
             }      
         }
     }
