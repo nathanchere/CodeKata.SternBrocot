@@ -64,7 +64,7 @@ namespace SternBrocotSequenceGenerator
         public void Generates_expected_sequence_values(int iteration, int expectedDividend, int expectedDivisor)
         {
             var expected = new Fraction(expectedDividend, expectedDivisor);
-            var result = Sequence.SternBrocot().Skip(iteration).First();
+            var result = Sequence.SternBrocot().Skip(iteration-1).First();
 
             Assert.Equal(expected, result);
         }

@@ -13,11 +13,18 @@ namespace SternBrocotSequenceGenerator
 
         public static IEnumerable<int> SternBrocotSeeds()
         {
-            var x = Fibonacci();
+            var seeds = Fibonacci();
 
-            int a = x.First();
-            throw new Exception();
+            var a = seeds.First();
+            var b = seeds.First();
+            yield return a;
+            yield return b;
 
+            while (true)
+            {
+                yield return a + b;
+                yield return b;                
+            }  
         }
 
         public static IEnumerable<int> Fibonacci()
