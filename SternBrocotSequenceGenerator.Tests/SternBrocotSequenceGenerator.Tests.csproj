@@ -7,7 +7,7 @@
     <ProjectGuid>{D0167B7E-7A55-4931-AC18-0A17D9A72EAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SternBrocotSequenceGenerator.Tests</RootNamespace>
+    <RootNamespace>SternBrocotSequenceGenerator</RootNamespace>
     <AssemblyName>SternBrocotSequenceGenerator.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
