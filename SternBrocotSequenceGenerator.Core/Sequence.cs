@@ -8,7 +8,17 @@ namespace SternBrocotSequenceGenerator
     {
         public static IEnumerable<Fraction> SternBrocot()
         {
-            throw new System.NotImplementedException();
+            var next = 1;
+            var seeds = SternBrocotSeeds().GetEnumerator();
+            seeds.MoveNext();
+            
+            while (true)
+            {
+                var current = next;
+                seeds.MoveNext();
+                next = seeds.Current;
+                yield return new Fraction(current, next);
+            }
         }
 
         public static IEnumerable<int> SternBrocotSeeds()
@@ -30,7 +40,7 @@ namespace SternBrocotSequenceGenerator
                 values.AddLast(first + second);
                 yield return nextSum;                        
 
-                values.AddLast(nextSum);
+                values.AddLast(second);
                 yield return second;                        
             }      
         }

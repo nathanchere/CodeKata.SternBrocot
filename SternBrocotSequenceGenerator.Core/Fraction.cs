@@ -40,5 +40,29 @@ namespace SternBrocotSequenceGenerator
         {
             return string.Format("{0}/{1}", Dividend, Divisor);
         }
+
+        // override object.Equals
+        public override bool Equals(object obj)
+        {            
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            var target = obj as Fraction;
+
+            if (target.Dividend != this.Dividend) return false;
+            if (target.Divisor != this.Divisor) return false;
+            return true;
+            
+        }
+
+// override object.GetHashCode
+        public override int GetHashCode()
+        {
+            // TODO: write your implementation of GetHashCode() here
+            throw new NotImplementedException();
+            return base.GetHashCode();
+        }
     }
 }
