@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 using Xunit.Extensions;
 
 namespace SternBrocotSequenceGenerator
@@ -29,8 +30,11 @@ namespace SternBrocotSequenceGenerator
         [InlineData(10,3,5)]
         public void Generates_expected_sequence_values(int iteration, int expectedDividend, int expectedDivisor)
         {
-            var expected = new Fraction(1,1);
+            var expected = new Fraction(expectedDividend,expectedDivisor);
+            var result = Sequence.SternBrocot().Take(iteration);
 
+            Assert.Equal(expectedDividend, result.Dividend);
+            Assert.Equal(expectedDivisor, result.Divisor);
         }
     }
 }
